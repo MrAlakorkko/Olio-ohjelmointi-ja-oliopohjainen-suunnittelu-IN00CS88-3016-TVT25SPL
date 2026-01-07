@@ -39,3 +39,18 @@
 
 # debug information files
 *.dwo
+
+# Kaikki build-hakemistot missä tahansa 
+build/
+**/build/
+**/BUILD/
+**/BUILD-*/
+
+# QT Creator -hakemistot kaikkialla 
+.qtcreator/
+**/.qtcreator/
+
+#QT Creator User files
+*.user
+*.user.*
+
