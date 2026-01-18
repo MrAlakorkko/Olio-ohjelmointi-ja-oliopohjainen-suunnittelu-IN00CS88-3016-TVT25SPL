@@ -5,11 +5,12 @@
 
 using namespace std;
 
-Game::Game(int max) {
+Game::Game(int max) { //Konstruktori
     maxNumber=max;
     srand(time(NULL)); //random seed ctime käyttäen
     randomNumber = rand() % maxNumber + 1;
     numOfGuesses=0;
+    cout << "GAME CONSTRUCTOR: object initialized with "<< maxNumber << " As maximun number / DEBUG" << endl;
 }
 
 Game::~Game() {
@@ -20,6 +21,7 @@ void Game::play() {
     do {
         cout << "Anna lukuarvaus 1 ja " << maxNumber << " valilta: ";
         cin >> playerGuess;
+        cout << "GAME CONSTRUCTOR: Player inserted number " << playerGuess << " /DEBUG" << endl;
         cout << "Arvasit luvun: " << playerGuess << endl;
         numOfGuesses++;
 
@@ -37,4 +39,5 @@ void Game::play() {
 void Game::printGameResult() {
     cout <<"Onneksi olkoon! Arvasit oikein! Luku oli : " << randomNumber << endl;
     cout <<"Arvauslukumaarasi oli : " << numOfGuesses << endl;
+    cout << "GAME CONSTRUCTOR: object cleared from stack memory / DEBUG" << endl;
 }
